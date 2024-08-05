@@ -45,12 +45,11 @@ def plot(f, n=1000 , domain={'x':(-1,1),'y':(-1,1)}):
             r=newton_raphson(z0,f)
             if r!=None:
                 r_index=indicing(r,roots)
-                print(r_index,end='')
                 pixel_grid[x_index,y_index]=r_index
 
-    plt.imshow(pixel_grid,cmap='hsv',origin='lower')
+    plt.imshow(pixel_grid,cmap='BuPu_r',origin='lower')
     plt.show()
 
-f = lambda z: z**5 -1
+f = lambda z: z**3 - 1
 
 plot(f)
